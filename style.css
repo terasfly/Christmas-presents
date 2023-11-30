@@ -1,0 +1,301 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: url(/images/snow2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    /* width: 900px; */
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@keyframes flashing {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+h1 {
+    /* Your existing h1 styles */
+    animation: flashing 2.5s linear infinite;
+}
+
+.slide img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 140px;
+    border-radius: 10px;
+    /* margin: 25px auto; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: all 0.5s ease;
+    /* padding: 10px 0 10px 0; */
+    cursor: pointer;
+    /* Smooth transition for hover effect */
+}
+
+.slide img:hover {
+    transform: scale(1.3);
+    /* Slightly enlarge the image */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 35px, rgba(0, 0, 0, 0.25) 0px 15px 15px;
+    /* Increase the shadow for a "lifted" effect */
+}
+
+.slide--gift {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide--container {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.arrow {
+    width: 20px;
+    margin: 0 100px;
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Four equal columns */
+    /* row-gap: 20px; */
+    /* column-gap: 20px; */
+    /* Space between grid items */
+    /* padding: 10px; */
+    width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    /* Vertically center items in their grid cell */
+    /* overflow-x: auto; */
+    /* Enables horizontal scrolling if content overflows */
+    z-index: 1;
+}
+
+.fa-gift {
+    color: red;
+    display: block;
+    /* padding: 10px; */
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.slide img {
+    border-radius: 30px;
+}
+
+.slider::-webkit-scrollbar {
+    height: 15px;
+    width: 5px;
+    border: 1px solid rgb(255, 221, 0);
+    background: rgb(255, 0, 0);
+}
+
+.slider::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: yellow;
+    /* outline: 5px solid blue; */
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Place the snow behind your text */
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    /* Start above the screen */
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    font-size: 5em;
+    opacity: 0.4;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(-100vh);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+    40% {
+        transform: translateX(-15px) translateY(20vh);
+    }
+    60% {
+        transform: translateX(20px) translateY(40vh);
+    }
+    80% {
+        transform: translateX(-10px) translateY(60vh);
+    }
+    100% {
+        transform: translateX(0) translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes swirl {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(20px);
+    }
+    40% {
+        transform: translateX(-20px);
+    }
+    60% {
+        transform: translateX(20px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.snowflake {
+    /* Existing styles */
+    animation: fall linear infinite, swirl 5s linear infinite;
+}
+
+
+/* You can add more keyframes to create a more complex falling effect */
+
+.snowflake {
+    /* Your existing styles */
+    animation: fall linear infinite;
+    /* Don't specify duration here */
+}
+
+.snow-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* Initial height */
+    background: white;
+    /* Color of snow */
+    transition: height 0.5s;
+}
+
+
+/* 
+button {
+    padding: 5px 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+   
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: rgb(255, 208, 0);
+    font-size: 25px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+} */
+
+
+/* image up */
+
+
+/* family members */
+
+.family-members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 400px;
+    left: 250px;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.family-members img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Makes the images round */
+    object-fit: cover;
+    /* Ensures the images are not distorted */
+}
+
+.family-members img:hover {
+    /* Highlight the picture on hover */
+    transform: scale(1.2);
+    /* Slightly enlarge the image */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 30px, rgba(0, 0, 0, 0.25) 0px 15px 15px;
+    /* Increase the shadow for a "lifted" effect */
+}
