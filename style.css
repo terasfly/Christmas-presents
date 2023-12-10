@@ -375,7 +375,8 @@ button:active {
         width: 50px;
     }
     .container {
-        height: 850px;
+        min-height: 100vh;
+        overflow-y: auto; /* Allows scrolling within the container itself if content overflows */
     }
     .family-members img {
         width: 80px;
