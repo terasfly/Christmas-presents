@@ -26,18 +26,18 @@ const imagesEgle = document.querySelectorAll('.image-class');
 
 // Image arrays for each member
 const lauraImages = [
-    'images/matas/m&ms.png',
-    'images/matas/m&ms.png',
-    'images/matas/m&ms.png',
-    'images/laura/astronaut.png',
+    'matas/m&ms.png',
+    'matas/m&ms.png',
+    'matas/m&ms.png',
+    'laura/astronaut.png',
 
 ];
 
 const egleImages = [
-    'images/matas/m&ms.png',
-    'images/egle/massage.png',
-    'images/egle/lupdazis.png',
-    'images/egle/coffe.png'
+    'matas/m&ms.png',
+    'egle/massage.png',
+    'egle/lupdazis.png',
+    'egle/coffe.png'
 ];
 // member button active
 // Select all elements with the class 'member'
@@ -120,10 +120,10 @@ function changeImageIndexLaura(imageElement) {
 // Matas setup
 // Image array for Matas
 const matasImages = [
-    'images/matas/m&ms.png',
-    'images/matas/netflix.png',
-    'images/matas/poundgift.png',
-    'images/matas/charger.png'
+    'matas/m&ms.png',
+    'matas/netflix.png',
+    'matas/poundgift.png',
+    'matas/charger.png'
 ];
 
 // Enable image changing when Matas is clicked
