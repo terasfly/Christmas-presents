@@ -3,7 +3,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     background: url(uno2.png);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
