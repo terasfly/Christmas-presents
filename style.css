@@ -388,4 +388,7 @@ button:active {
     .slide--container {
         max-width: 360px;
     }
+    .family-members {
+        margin-bottom: 60px;
+    }
 }
