@@ -375,7 +375,7 @@ button:active {
         width: 50px;
     }
     .container {
-        height: 745px;
+        height: 553px;
     }
     .family-members img {
         width: 80px;
@@ -383,5 +383,8 @@ button:active {
     }
     h1 {
         font-size: 24px;
+    }
+    .slide--container {
+        max-width: 360px;
     }
 }
